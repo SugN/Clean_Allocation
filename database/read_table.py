@@ -11,13 +11,12 @@ __version__ = "1.0.1"
 
 """
 import xlrd
-import data
 
 def read_table(filename):
 
     book = xlrd.open_workbook(filename)
     for name in book.sheet_names():
-        print name
+        print(name)
 
 
 if __name__ == '__main__':

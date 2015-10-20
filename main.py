@@ -10,7 +10,8 @@ __version__ = "1.0.1"
 """
 
 """
-import sys
+import database
+
 if __name__ == '__main__':
     print("test")
-    print(sys.path)
+    database.read_table('2015.xls')
