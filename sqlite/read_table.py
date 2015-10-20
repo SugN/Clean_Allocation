@@ -10,7 +10,16 @@ __version__ = "1.0.1"
 """
 
 """
-import sys
+import xlrd
+import data
+
+def read_table(filename):
+
+    book = xlrd.open_workbook(filename)
+    for name in book.sheet_names():
+        print name
+
+
 if __name__ == '__main__':
-    print("test")
-    print(sys.path)
+
+    read_table('2015.xls')
